@@ -1,0 +1,19 @@
+{
+  "name": "mocha-test-setup",
+  "version": "1.0.0",
+  "description": "Barebones application with mocha setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit './{,!(node_modules)/**}/*.spec.js'"
+  },
+  "keywords": [
+    "TDD",
+    "Mocha",
+    "testing"
+  ],
+  "author": "Adam Dolah",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.1.0"
+  }
+}
