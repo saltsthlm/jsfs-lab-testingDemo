@@ -1,7 +1,9 @@
-const testFunction = require('./index');
+import 'mocha';
+import assert from 'assert';
+import { testFunction} from './index';
 
 describe('testFunction', () => {
-  test('should return the number of names with first letter "A"', () => {
+  it('should return the number of names with first letter "A"', () => {
     // Arrange
     const testData = ['Adam', 'Mies', 'Zachary', 'Marcus', 'John'];
 
@@ -9,9 +11,9 @@ describe('testFunction', () => {
     const result = testFunction(testData);
 
     // Assert
-    expect(result).toBe(1);
+    assert.equal(result, 1);
   });
-  test('should return "None" if no name has A as first letter', () => {
+  it('should return "None" if no name has A as first letter', () => {
     // Arrange
     const testData = ['Mies', 'Zachary', 'Marcus', 'John'];
 
@@ -19,6 +21,6 @@ describe('testFunction', () => {
     const result = testFunction(testData);
 
     // Assert
-    expect(result).toBe('None');
+    assert.equal(result, 'None');
   });
 });

@@ -30,9 +30,16 @@ In each lab we'll instruct whether you should set up a Mocha or a Jest test runn
 
 To create a basic testing setup with Mocha or Jest run the following command in the root of your project: `npm install [mocha/jest] --save-dev`. Then all you need to do is to create the test command described in the `package.json`s.
 
+For TypeScript to work properly, you need to install some additional types and tools:
+
+```bash
+npm i typescript ts-node mocha --save-dev
+npm i @types/node [@types/mocha @types/jest] @types/chai --save-dev
+```
+
 ## This Repository
 
-In this repository we've set up two very barebones application structures in which we're using a basic _Mocha_ setup and _Jest_ setup, respectively. Install the dependencies with `npm install` and try out the scripts `npm run test` in each of the projects. Compare the results in of the terminal output with the comments in the `index.js` files to see if you managed to run the tests correctly. Also note the differences in `package.json` setups and in assertion syntax between Mocha and Jest. As mentioned above, this has to do with that Mocha doesn't include a specific assertion library. If you want to use a more semantic assertion library, implement _Chai_ into your tests.
+In this repository we've set up two very bare-bones application structures in which we're using a basic _Mocha_ setup and _Jest_ setup, respectively. Install the dependencies with `npm install` and try out the scripts `npm run test` in each of the projects. Compare the results in of the terminal output with the comments in the `index.js` files to see if you managed to run the tests correctly. Also note the differences in `package.json` setups and in assertion syntax between Mocha and Jest. As mentioned above, this has to do with that Mocha doesn't include a specific assertion library. If you want to use a more semantic assertion library, implement _Chai_ into your tests.
 
 The two application structures are obviously very basic and there are many more features to both test runners. Check out Mocha's and Jest's respective documentations to see what you can do with each of the tools.
 

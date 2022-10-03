@@ -1,8 +1,8 @@
-const assert = require('assert');
-const testFunction = require('./index');
+import {expect, describe, test} from '@jest/globals';
+import {testFunction} from './index';
 
 describe('testFunction', () => {
-  it('should return the number of names with first letter "A"', () => {
+  test('should return the number of names with first letter "A"', () => {
     // Arrange
     const testData = ['Adam', 'Mies', 'Zachary', 'Marcus', 'John'];
 
@@ -10,9 +10,9 @@ describe('testFunction', () => {
     const result = testFunction(testData);
 
     // Assert
-    assert.equal(result, 1);
+    expect(result).toBe(1);
   });
-  it('should return "None" if no name has A as first letter', () => {
+  test('should return "None" if no name has A as first letter', () => {
     // Arrange
     const testData = ['Mies', 'Zachary', 'Marcus', 'John'];
 
@@ -20,6 +20,6 @@ describe('testFunction', () => {
     const result = testFunction(testData);
 
     // Assert
-    assert.equal(result, 'None');
+    expect(result).toBe('None');
   });
 });
